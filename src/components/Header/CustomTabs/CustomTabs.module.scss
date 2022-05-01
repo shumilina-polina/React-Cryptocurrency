@@ -1,0 +1,39 @@
+.tabs {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 291px;
+
+  .tab_container {
+    position: relative;
+    padding: 13px 0;
+    cursor: pointer;
+    &::after {
+      margin-top: 13px;
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #356af0;
+      content: "";
+      transition: width 0.2s ease-out; /*задаём время анимации*/
+      will-change: width;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none;
+      &::after {
+        width: 100%;
+      }
+    }
+
+    .tab {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(#{--text-color-default});
+    }
+  }
+}

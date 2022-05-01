@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90px;
+  cursor: pointer;
+  margin-right: 77px;
+
+  span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(#{--text-color-default});
+  }
+}
