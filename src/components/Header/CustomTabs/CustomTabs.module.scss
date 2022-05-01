@@ -7,6 +7,10 @@
   .tab_container {
     position: relative;
     padding: 13px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(#{--text-color-default});
     cursor: pointer;
     &::after {
       margin-top: 13px;
@@ -27,13 +31,6 @@
       &::after {
         width: 100%;
       }
-    }
-
-    .tab {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
-      color: var(#{--text-color-default});
     }
   }
 }

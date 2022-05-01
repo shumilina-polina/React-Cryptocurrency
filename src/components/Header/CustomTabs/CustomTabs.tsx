@@ -17,7 +17,7 @@ export const CustomTabs: FC = () => {
     <ul className={s.tabs}>
       {tabs.map((tab, i) => (
         <li className={s.tab_container} key={tab.value} tabIndex={i + 1}>
-          <div className={s.tab}>{tab.value}</div>
+          {tab.value}
         </li>
       ))}
     </ul>
