@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import SvgSelector from "../../assets/SvgSelector";
 import { CustomTabs } from "./CustomTabs/CustomTabs";
 import s from "./Header.module.scss";
@@ -7,7 +7,6 @@ import { ThemeButton } from "./ThemeButton/ThemeButton";
 interface Props {}
 
 const Header: FC = (props: Props) => {
-  
   return (
     <header className={s.header}>
       <div className={s.wrapper}>
@@ -17,7 +16,7 @@ const Header: FC = (props: Props) => {
         </div>
         <CustomTabs />
       </div>
-      <ThemeButton/>
+      <ThemeButton />
     </header>
   );
 };
