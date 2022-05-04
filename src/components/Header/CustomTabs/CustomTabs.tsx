@@ -1,13 +1,17 @@
-import React, { FC, SyntheticEvent, useState } from "react";
+import React, { FC, SyntheticEvent } from "react";
+import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
+import { tabsSlice } from "../../../store/reducers/TabsSlice";
 import { tabValue } from "../../../types/types";
 import s from "./CustomTabs.module.scss";
 
 export const CustomTabs: FC = () => {
-  const [activeTab, setActiveTab] = useState<string>(tabValue.Currencies);
+  const { changeTab } = tabsSlice.actions;
+  const { currentTab } = useAppSelector((state) => state.tabsReducer);
+  const dispatch = useAppDispatch();
 
   const handle = (_: SyntheticEvent, tabValue: tabValue) => {
-    if (!(activeTab === tabValue)) {
-      setActiveTab(tabValue);
+    if (!(currentTab === tabValue)) {
+      dispatch(changeTab(tabValue));
     }
   };
 
