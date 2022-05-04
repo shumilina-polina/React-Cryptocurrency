@@ -30,7 +30,10 @@ export const CustomTabs: FC = () => {
     <ul className={s.tabs}>
       {tabs.map((tab, i) => (
         <li
-          className={s.tab_container}
+          className={
+            s.tab_container +
+            (currentTab === tab.value ? " " + s.tab_container__active : "")
+          }
           key={tab.value}
           tabIndex={i + 1}
           onClick={(e) => handle(e, tab.value)}

@@ -12,6 +12,7 @@
     line-height: 16px;
     color: var(#{--text-color-default});
     cursor: pointer;
+
     &::after {
       margin-top: 13px;
       display: block;
@@ -21,7 +22,7 @@
       height: 1px;
       background-color: #356af0;
       content: "";
-      transition: width 0.2s ease-out; /*задаём время анимации*/
+      transition: width 0.2s ease-out;
       will-change: width;
     }
 
@@ -31,6 +32,12 @@
       &::after {
         width: 100%;
       }
+    }
+  }
+
+  .tab_container__active {
+    &::after {
+      width: 100%;
     }
   }
 }
