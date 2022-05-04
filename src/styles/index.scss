@@ -11,7 +11,7 @@
 
 body {
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: var(#{--body-background-default});
 }
 
@@ -19,4 +19,10 @@ body {
   max-width: 768px;
   margin: 0 auto;
   padding-top: 20px;
+}
+
+.content_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
