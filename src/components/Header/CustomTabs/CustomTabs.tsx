@@ -1,4 +1,4 @@
-import React, { FC, SyntheticEvent } from "react";
+import React, { FC, SyntheticEvent, useCallback } from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { tabsSlice } from "../../../store/reducers/TabsSlice";
 import { tabValue } from "../../../types/types";
@@ -9,11 +9,14 @@ export const CustomTabs: FC = () => {
   const { currentTab } = useAppSelector((state) => state.tabsReducer);
   const dispatch = useAppDispatch();
 
-  const handle = (_: SyntheticEvent, tabValue: tabValue) => {
-    if (!(currentTab === tabValue)) {
-      dispatch(changeTab(tabValue));
-    }
-  };
+  const handleTab = useCallback(
+    (_: SyntheticEvent, tabValue: tabValue) => {
+      if (!(currentTab === tabValue)) {
+        dispatch(changeTab(tabValue));
+      }
+    },
+    [currentTab]
+  );
 
   const tabs = [
     {
@@ -36,7 +39,7 @@ export const CustomTabs: FC = () => {
           }
           key={tab.value}
           tabIndex={i + 1}
-          onClick={(e) => handle(e, tab.value)}
+          onClick={(e) => handleTab(e, tab.value)}
         >
           {tab.value}
         </li>

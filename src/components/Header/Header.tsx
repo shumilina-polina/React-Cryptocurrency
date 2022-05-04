@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import SvgSelector from "../../assets/SvgSelector";
 import { CustomTabs } from "./CustomTabs/CustomTabs";
 import s from "./Header.module.scss";
