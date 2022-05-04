@@ -1,36 +1,24 @@
+$tab-color-light: #9db7ff;
+
 $body-background-dark: #202225;
 $body-background-light: #fff;
 
-$components-background-dark: #000;
-$components-background-light: #fff;
-
-$card-background-dark: #000;
-$card-background-light: #fff;
-
-$card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
-$card-box-shadow-light: 0px 3px 20px rgba(147, 144, 144, 0.28);
-
 $text-color-dark: #fff;
 $text-color-light: #173076;
+
+$input-color-dark: #fff;
+$input-color-light: #eff3ff;
 
 :root {
   --body-background-dark: #{$body-background-dark};
   --body-background-light: #{$body-background-light};
   --body-background-default: var(#{--body-background-light});
 
-  --components-background-dark: #{$components-background-dark};
-  --components-background-light: #{$components-background-light};
-  --components-background-default: var(#{--components-background-light});
-
-  --card-background-dark: #{$card-background-dark};
-  --card-background-light: #{$card-background-light};
-  --card-background-default: var(#{--card-background-light});
-
-  --card-shadow-dark: #{$card-box-shadow-dark};
-  --card-shadow-light: #{$card-box-shadow-light};
-  --card-shadow-default: var(#{--card-shadow-light});
-
   --text-color-dark: #{$text-color-dark};
   --text-color-light: #{$text-color-light};
   --text-color-default: var(#{--text-color-light});
+
+  --input-color-dark: #{$input-color-dark};
+  --input-color-light: #{$input-color-light};
+  --input-color-default: var(#{--input-color-light});
 }

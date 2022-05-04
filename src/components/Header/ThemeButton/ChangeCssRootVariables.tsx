@@ -4,9 +4,7 @@ export function changeCssRootVariables(theme: string) {
 
   const components = [
     "body-background",
-    "components-background",
-    "card-background",
-    "card-shadow",
+    "input-color",
     "text-color",
   ];
 

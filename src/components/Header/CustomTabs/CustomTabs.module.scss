@@ -1,3 +1,5 @@
+@import "../../../styles/variables.scss";
+
 .tabs {
   list-style: none;
   display: flex;
@@ -20,7 +22,7 @@
       left: 0;
       width: 0;
       height: 1px;
-      background-color: #356af0;
+      background-color: $tab-color-light;
       content: "";
       transition: width 0.2s ease-out;
       will-change: width;
