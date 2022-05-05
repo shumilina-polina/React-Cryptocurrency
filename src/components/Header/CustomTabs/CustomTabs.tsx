@@ -20,10 +20,10 @@ export const CustomTabs: FC = () => {
 
   const tabs = [
     {
-      value: tabValue.Currencies,
+      value: tabValue.Crypto,
     },
     {
-      value: tabValue.Crypto,
+      value: tabValue.Currencies,
     },
     {
       value: tabValue.Social,

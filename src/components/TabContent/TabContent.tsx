@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useAppSelector } from "../../hooks/redux";
 import { tabValue } from "../../types/types";
-import { Currencies } from "./Currencies/Currencies";
+import { Crypto } from "./Crypto/Crypto";
 import s from "./TabContent.module.scss";
 
 export const TabContent = () => {
@@ -9,14 +9,14 @@ export const TabContent = () => {
 
   const renderedTabContent = useMemo(() => {
     switch (currentTab) {
-      case tabValue.Currencies:
-        return <Currencies />;
       case tabValue.Crypto:
-        return <section>Crypto</section>;
+        return <Crypto />;
+      case tabValue.Currencies:
+        return <section>Currencies</section>;
       case tabValue.Social:
         return <section>Social</section>;
       default:
-        return <section>Currencies</section>;
+        return <Crypto />;
     }
   }, [currentTab]);
 

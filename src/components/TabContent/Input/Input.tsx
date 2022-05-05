@@ -8,7 +8,7 @@ export const Input = () => {
     <input
       className={s.input}
       type="text"
-      placeholder="Search a currency…"
+      placeholder="Search a crypto…"
       onChange={handleInput}
     />
   );

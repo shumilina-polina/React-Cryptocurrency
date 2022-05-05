@@ -1,5 +1,5 @@
 export enum tabValue {
-  Currencies = "Currencies",
   Crypto = "Crypto",
+  Currencies = "Currencies",
   Social = "Social",
 }

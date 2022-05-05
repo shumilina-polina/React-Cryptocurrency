@@ -5,7 +5,7 @@ interface TabState {
 }
 
 const initialState: TabState = {
-  currentTab: tabValue.Currencies,
+  currentTab: tabValue.Crypto,
 };
 
 export const tabsSlice = createSlice({
