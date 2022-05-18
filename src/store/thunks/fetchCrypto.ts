@@ -3,12 +3,12 @@ import { Crypto } from "../../types/types";
 import { cryptoSlice } from "./../reducers/CryptoSlice";
 import { AppDispatch } from "./../store";
 
-export const fetchCrypto = (currency: string) => {
+export const fetchCrypto = (currency: string, num: number = 7) => {
   const base_url =
     process.env.REACT_APP_API_URL +
     "coins/markets?vs_currency=" +
     currency +
-    "&order=market_cap_desc&per_page=7&page=1&sparkline=false";
+    `&order=market_cap_desc&per_page=${num}&page=1&sparkline=false`;
   return async (dispatch: AppDispatch) => {
     try {
       dispatch(cryptoSlice.actions.fetchCrypto());
