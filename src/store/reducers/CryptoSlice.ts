@@ -1,12 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
-
-interface Crypto {
-  id: string;
-  name: string;
-  current_price: string;
-  symbol: string;
-}
+import { Crypto } from "../../types/types";
 
 interface CryptoState {
   crypto: Crypto[];
@@ -15,12 +9,22 @@ interface CryptoState {
 }
 
 const initialState: CryptoState = {
-  crypto: [],
+  crypto: [
+    {
+      image: "",
+      name: "",
+      id: "",
+      symbol: "",
+      current_price: 0,
+      total_volume: 0,
+      price_change_percentage_24h: 0,
+    },
+  ],
   isLoading: false,
   error: "",
 };
 
-export const CryptoSlice = createSlice({
+export const cryptoSlice = createSlice({
   name: "crypto",
   initialState,
   reducers: {
@@ -38,4 +42,4 @@ export const CryptoSlice = createSlice({
   },
 });
 
-export default CryptoSlice.reducer;
+export default cryptoSlice.reducer;

@@ -1,32 +1,21 @@
 @import "../../../styles/variables.scss";
 
 .crypto_container {
-}
+  width: 500px;
 
-.input {
-  width: 100%;
-  height: 100%;
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: none;
-  background: var(#{--input-color-default});
-  outline: none;
-  color: var(#{--text-color-default});
-  font-size: 13px;
-  font-weight: 500;
-  text-overflow: ellipsis;
-  transition: box-shadow 0.3s ease;
-
-  &::placeholder {
-    color: var(#{--placeholder-color-default});
-    opacity: 1;
-    font-weight: 300;
-    transition: opacity 0.3s ease;
-  }
-  &:focus {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    &::placeholder {
-      opacity: 0;
+  .coin_container {
+    height: 270px;
+    padding-right: 10px;
+    overflow-y: scroll;
+    scrollbar-color: $border-color inherit;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+      background: inherit;
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: $border-color;
     }
   }
 }

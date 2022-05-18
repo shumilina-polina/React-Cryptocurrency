@@ -1,0 +1,63 @@
+@import "../../../../styles/variables.scss";
+
+.coin_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 45px;
+  border-bottom: 1px solid $border-color;
+  color: var(#{--text-color-default});
+
+  .coin_title {
+    display: flex;
+    align-items: center;
+    padding-right: 14px;
+    min-width: 180px;
+
+    & h1 {
+      font-size: 12px;
+      width: 80px;
+    }
+
+    & img {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .coin_symbol {
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+
+  .coin_data {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+
+    .coin_price {
+      width: 70px;
+    }
+
+    .coin_volume {
+      width: 120px;
+    }
+
+    .coin_percent {
+      width: 70px;
+    }
+
+    .coin_percent__red {
+      color: #f00606;
+    }
+
+    .coin_percent__green {
+      color: #11d811;
+    }
+  }
+}
