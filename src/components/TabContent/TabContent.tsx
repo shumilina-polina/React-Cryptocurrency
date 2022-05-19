@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { SyntheticEvent, useMemo, useState } from "react";
 import { useAppSelector } from "../../hooks/redux";
 import { tabValue } from "../../types/types";
 import { Crypto } from "./Crypto/Crypto";
@@ -16,7 +16,7 @@ export const TabContent = () => {
       case tabValue.Social:
         return <section>Social</section>;
       default:
-        return <Crypto />;
+        return <h1>Error...</h1>;
     }
   }, [currentTab]);
 
