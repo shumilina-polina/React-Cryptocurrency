@@ -1,8 +1,8 @@
 import React from "react";
-import { TabContent } from "./components/TabContent/TabContent";
 import Header from "./components/Header/Header";
 import "./styles/index.scss";
 import { ExchangeBlock } from "./components/ExchangeBlock/ExchangeBlock";
+import { TabContent } from "./components/TabContent/TabContent";
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { useAppSelector } from "../../hooks/redux";
 import { tabValue } from "../../types/types";
 import { Crypto } from "./Crypto/Crypto";
