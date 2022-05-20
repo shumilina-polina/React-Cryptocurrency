@@ -1,0 +1,37 @@
+@import "../../../styles/variables.scss";
+
+.select_wrapper {
+  position: relative;
+  cursor: pointer;
+  background: var(#{--input-color-default});
+  border-radius: 6px;
+
+  &::after {
+    content: url(../../../assets/images/arrow-down.svg);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+  .select {
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px 10px 12px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(#{--text-color-default});
+    font-size: 13px;
+    font-weight: 500;
+    transition: box-shadow, width 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}

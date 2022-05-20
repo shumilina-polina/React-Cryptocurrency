@@ -3,6 +3,13 @@
 .crypto_container {
   width: 500px;
 
+  .input_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+
   .coin_container {
     height: 270px;
     padding-right: 10px;

@@ -11,7 +11,7 @@ import { fetchCrypto } from "../../../store/thunks/fetchCrypto";
 import { SingleCoin } from "./SingleCoin/SingleCoin";
 import s from "./Crypto.module.scss";
 import { Input } from "../Input/Input";
-import { SelectCurrency } from "../SelectCurrency";
+import { SelectCurrency } from "../SelectCurrency/SelectCurrency";
 
 export const Crypto = () => {
   const dispatch = useAppDispatch();
@@ -56,8 +56,10 @@ export const Crypto = () => {
 
   return (
     <section className={s.crypto_container}>
-      <Input onChange={handleInput} />
-      <SelectCurrency />
+      <div className={s.input_wrapper}>
+        <Input onChange={handleInput} />
+        <SelectCurrency />
+      </div>
       <div className={s.coin_container} onScroll={scrollHandler}>
         {filteredCrypto.map((coin) => {
           return <SingleCoin key={coin.id} data={coin} />;
