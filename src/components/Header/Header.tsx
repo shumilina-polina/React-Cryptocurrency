@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 import SvgSelector from "../../assets/SvgSelector";
 import { CustomTabs } from "./CustomTabs/CustomTabs";
 import s from "./Header.module.scss";

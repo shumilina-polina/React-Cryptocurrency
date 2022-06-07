@@ -1,21 +1,12 @@
-import React, { FC, SyntheticEvent, useCallback } from "react";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { tabsSlice } from "../../../store/reducers/TabsSlice";
+import { FC, useState } from "react";
 import { tabValue } from "../../../types/types";
+import { Link } from "react-router-dom";
+
 import s from "./CustomTabs.module.scss";
 
 export const CustomTabs: FC = () => {
-  const { changeTab } = tabsSlice.actions;
-  const { currentTab } = useAppSelector((state) => state.tabsReducer);
-  const dispatch = useAppDispatch();
-
-  const handleTab = useCallback(
-    (_: SyntheticEvent, tabValue: tabValue) => {
-      if (!(currentTab === tabValue)) {
-        dispatch(changeTab(tabValue));
-      }
-    },
-    [currentTab]
+  const [currentTab, setCurrentTab] = useState(
+    localStorage.getItem("currentTab") || tabValue.Crypto
   );
 
   const tabs = [
@@ -32,17 +23,25 @@ export const CustomTabs: FC = () => {
   return (
     <ul className={s.tabs}>
       {tabs.map((tab, i) => (
-        <li
-          className={
-            s.tab_container +
-            (currentTab === tab.value ? " " + s.tab_container__active : "")
-          }
+        <Link
+          className="link"
+          to={"/" + tab.value.toLowerCase()}
           key={tab.value}
-          tabIndex={i + 1}
-          onClick={(e) => handleTab(e, tab.value)}
         >
-          {tab.value}
-        </li>
+          <li
+            className={
+              s.tab_container +
+              (currentTab === tab.value ? " " + s.tab_container__active : "")
+            }
+            tabIndex={i + 1}
+            onClick={() => {
+              setCurrentTab(tab.value);
+              localStorage.setItem("currentTab", tab.value);
+            }}
+          >
+            {tab.value}
+          </li>
+        </Link>
       ))}
     </ul>
   );
